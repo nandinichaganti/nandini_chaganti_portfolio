@@ -7,16 +7,16 @@
         <span id="role-text" class="role-text highlight-pink"></span>
     </div>
     <div class="showcase-text">
-        This site is a showcase of my projects, interests, and journey as a developer.<br>
+        This site is a showcase of my projects, interests, and journey as a software engineer.<br>
         <strong>Explore to learn more about me and my work!</strong>
     </div>
-    <a href="#projects" class="cta-btn-pink discover-btn">Discover More</a>
+    <a href="#about" class="cta-btn-pink discover-btn">Discover More</a>
 </div>
 <script>
 const roles = [
+    "Software Engineer",
     "Full Stack Developer",
-    "Data Engineer",
-    "Graph Database Engineer"
+    "Data Engineer"
 ];
 let roleIndex = 0;
 let charIndex = 0;
@@ -45,6 +45,7 @@ function eraseRole() {
     }
 }
 
+// Start the animation after DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
     roleText.textContent = "";
     typeRole();
