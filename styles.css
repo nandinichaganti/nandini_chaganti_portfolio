@@ -113,7 +113,7 @@ main {
 html, body {
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .home-fullscreen {
@@ -182,4 +182,131 @@ html, body {
 
 body.home-active header {
     display: none;
+}
+
+.projects-page {
+    min-height: 100vh;
+    padding: 72px 24px 96px;
+    background: linear-gradient(135deg, #0f172a 0%, #111827 35%, #1f2937 100%);
+    color: #f9fafb;
+    box-sizing: border-box;
+}
+
+.projects-shell {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.projects-header h1 {
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    margin: 0 0 12px;
+    color: #f472b6;
+}
+
+.projects-header p {
+    font-size: 1.05rem;
+    color: #d1d5db;
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 22px 20px 18px;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(244, 114, 182, 0.12);
+}
+
+.project-tag {
+    display: inline-block;
+    background: rgba(244, 114, 182, 0.12);
+    color: #f9a8d4;
+    border: 1px solid rgba(244, 114, 182, 0.3);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.project-card h2 {
+    margin: 0 0 12px;
+    font-size: 1.55rem;
+    color: #fff;
+}
+
+.project-card p {
+    color: #d1d5db;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.project-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.project-skills span {
+    background: rgba(99, 102, 241, 0.12);
+    color: #c7d2fe;
+    border: 1px solid rgba(99, 102, 241, 0.35);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.project-links a {
+    color: #f9a8d4;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .portfolio-header {
+        font-size: 2.1em;
+    }
+
+    .role-text {
+        min-width: 220px;
+        font-size: 1.5em;
+    }
+
+    .projects-page {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }
