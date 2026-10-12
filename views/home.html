@@ -6,25 +6,30 @@
         <span class="intro-text">I'm a </span>
         <span id="role-text" class="role-text highlight-pink"></span>
     </div>
+
     <div class="showcase-text">
-        This site is a showcase of my projects, interests, and journey as a developer.<br>
-        <strong>Explore to learn more about me and my work!</strong>
+        I design and build full-stack web applications using modern JavaScript and cloud technologies to deliver reliable, user-focused products.
     </div>
+
     <a href="#projects" class="cta-btn-pink discover-btn">Discover More</a>
 </div>
+
 <script>
 const roles = [
+    "Software Engineer",
     "Full Stack Developer",
     "Data Engineer",
     "Graph Database Engineer"
 ];
+
 let roleIndex = 0;
 let charIndex = 0;
 const roleText = document.getElementById("role-text");
 
 function typeRole() {
-    if (charIndex < roles[roleIndex].length) {
-        roleText.textContent += roles[roleIndex][charIndex];
+    const current = roles[roleIndex];
+    if (charIndex < current.length) {
+        roleText.textContent += current[charIndex];
         charIndex++;
         setTimeout(typeRole, 90);
     } else {
@@ -39,8 +44,6 @@ function eraseRole() {
         setTimeout(eraseRole, 40);
     } else {
         roleIndex = (roleIndex + 1) % roles.length;
-        roleText.textContent = "";
-        charIndex = 0;
         setTimeout(typeRole, 400);
     }
 }
